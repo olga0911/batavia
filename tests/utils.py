@@ -451,7 +451,7 @@ class TranspileTestCase(TestCase):
                 shutil.rmtree(test_dir)
                 # print(js_out)
 
-            # Cleanse the Python and Java output, producing a simple
+            # Cleanse the Python and JavaScript output, producing a simple
             # normalized format for exceptions, floats etc.
             js_out = cleanse_javascript(js_out)
             py_out = cleanse_python(py_out)
@@ -513,7 +513,7 @@ class TranspileTestCase(TestCase):
         "Run code under JavaScript and check the output is as expected"
         self.maxDiff = None
         #==================================================
-        # Prep - compile any required Java sources
+        # Prep - compile any required JavaScript sources
         #==================================================
         # Cleanse the Python output, producing a simple
         # normalized format for exceptions, floats etc.
@@ -551,11 +551,11 @@ class TranspileTestCase(TestCase):
                 shutil.rmtree(test_dir)
                 # print(js_out)
 
-            # Cleanse the Java output, producing a simple
+            # Cleanse the JavaScript output, producing a simple
             # normalized format for exceptions, floats etc.
             js_out = cleanse_javascript(js_out)
 
-            # Confirm that the output of the Java code is the same as the Python code.
+            # Confirm that the output of the JavaScript code is the same as the Python code.
             self.assertEqual(js_out, py_out, 'Global context')
 
         #==================================================
@@ -590,7 +590,7 @@ class TranspileTestCase(TestCase):
                 shutil.rmtree(test_dir)
                 # print(js_out)
 
-            # Cleanse the Java output, producing a simple
+            # Cleanse the JavaScript output, producing a simple
             # normalized format for exceptions, floats etc.
             js_out = cleanse_javascript(js_out)
 
